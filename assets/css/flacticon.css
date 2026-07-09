@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../webfonts/flaticon.woff2?f43a10aa0b8acc122f6b9e6aa34878f3") format("woff2"),
+url("../webfonts/flaticon.woff?f43a10aa0b8acc122f6b9e6aa34878f3") format("woff"),
+url("../webfonts/flaticon.eot?f43a10aa0b8acc122f6b9e6aa34878f3#iefix") format("embedded-opentype"),
+url("../webfonts/flaticon.ttf?f43a10aa0b8acc122f6b9e6aa34878f3") format("truetype"),
+url("../webfonts/flaticon.svg?f43a10aa0b8acc122f6b9e6aa34878f3#flaticon_mycollection") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-support:before {
+    content: "\f101";
+}
+.flaticon-law:before {
+    content: "\f102";
+}
+.flaticon-solution:before {
+    content: "\f103";
+}
+.flaticon-healthcare:before {
+    content: "\f104";
+}
+.flaticon-prevention:before {
+    content: "\f105";
+}
+.flaticon-family:before {
+    content: "\f106";
+}
+.flaticon-rule:before {
+    content: "\f107";
+}
+.flaticon-accident:before {
+    content: "\f108";
+}
+.flaticon-prisoner:before {
+    content: "\f109";
+}
+.flaticon-feedback:before {
+    content: "\f10a";
+}
+.flaticon-handshake:before {
+    content: "\f10b";
+}
+

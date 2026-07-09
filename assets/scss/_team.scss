@@ -1,0 +1,404 @@
+.team-items {
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+
+  .team-image {
+    margin-bottom: 24px;
+    img {
+      @include imgw;
+      border-radius: 18px;
+    }
+
+    .team-social {
+      position: absolute;
+      top: 24px;
+      right: 20px;
+
+      ul {
+        transform: translateY(-100px);
+        opacity: 0;
+        visibility: hidden;
+        @include transition;
+
+        li {
+          margin-bottom: 12px;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            color: $black;
+            background: $white;
+            border-radius: 100%;
+            @include transition;
+            &:hover {
+              color: $white;
+              background-color: $theme-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .team-content {
+    h4 {
+      font-size: 24px;
+      line-height: 32px;
+      display: inline-block;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 5px;
+        height: 1px;
+        width: 0;
+        background-color: $theme-color;
+        @include transition;
+      }
+
+      a {
+        &:hover {
+          color: $theme-color;
+        }
+      }
+
+      &:hover {
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &:hover {
+
+    .team-image {
+
+      .team-social {
+
+        ul {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+
+      }
+
+    }
+
+  }
+}
+
+.team-items2 {
+  margin-top: 30px;
+  border-radius: 18px;
+  background-color: #e9f2f1;
+
+  .team-image {
+    img {
+      @include imgw;
+      border-radius: 18px 18px 0 0;
+    }
+  }
+  .team-content {
+    padding: 50px 0 20px;
+    text-align: center;
+    position: relative;
+
+    .social-profile {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 82%;
+      content: "";
+      z-index: 2;
+      display: inline-block;
+      overflow: hidden;
+      cursor: pointer;
+
+      ul {
+        transform: translateY(100px);
+        transition: all 0.6s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+
+        li {
+          a {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50px;
+            text-align: center;
+            display: block;
+            background: $white;
+            color: $header-color;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 16px;
+            margin-bottom: 5px;
+
+            &:hover {
+              color: $black;
+              background-color: $theme-color-3;
+            }
+          }
+        }
+      }
+
+      .plus-btn {
+        z-index: 9;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50px;
+        text-align: center;
+        display: inline-block;
+        background: $theme-color-3;
+        color: $black;
+        font-size: 16px;
+      }
+
+      &:hover {
+        ul {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.team-details-wrapper {
+
+  .team-author-items {
+    @include flex;
+    gap: 30px;
+    padding: 30px;
+    background-color: $bg-color;
+    border-radius: 12px;
+
+    @include breakpoint(max-xl) {
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .thumb {
+      max-width: 370px;
+
+      img {
+        @include imgw;
+        border-radius: 8px;
+      }
+    }
+
+    .content {
+      max-width: 700px;
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 5px;
+
+        @include breakpoint(max-sm) {
+          font-size: 26px;
+        }
+      }
+
+      span {
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+
+      ul {
+        margin-top: 20px;
+        @include flex;
+        gap: 50px;
+        border-top: 1px solid $border-color;
+        padding: 20px 0;
+
+        @include breakpoint(max-xl) {
+          flex-wrap: wrap;
+          gap: 15px;
+          margin-top: 20px;
+          justify-content: center;
+        }
+
+        li {
+          color: $header-color;
+
+          span {
+            font-weight: 500;
+            color: $theme-color;
+          }
+
+          i {
+            margin-right: 5px;
+          }
+
+          .color-star {
+            color: $theme-color;
+          }
+        }
+      }
+
+      .social-itemx {
+        @include flex;
+        gap: 10px;
+        
+        @include breakpoint(max-xl) {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        
+        h6 {
+          color: $theme-color;
+        }
+
+        .social-icon {
+          gap: 15px;
+          position: relative;
+          z-index: 9;
+
+          a {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            font-size: 16px;
+            display: block;
+            color: $theme-color;
+            transition: all 0.4s ease-in-out;
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid $theme-color;
+            border-radius: 50%;
+
+            &:hover {
+              background-color: $theme-color;
+              color: $white;
+              border: 1px solid transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .details-info-items {
+    padding: 70px 0 40px;
+    border-bottom: 1px solid $border-color;
+
+    @include breakpoint(max-md) {
+      padding: 50px 0;
+    }
+
+    @include breakpoint(max-sm) {
+      padding: 40px 0;
+    }
+
+    .info-content {
+      h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .progress-wrap {
+      margin-left: 30px;
+
+      @include breakpoint(max-lg) {
+        margin-left: 0;
+      }
+
+      .pro-items {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        .pro-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 10px;
+
+          .title {
+            font-size: 16px;
+            font-weight: 600;
+            color: $header-color;
+          }
+
+          .point {
+            font-size: 16px;
+            color: $header-color;
+          }
+        }
+        .progress {
+          background: $bg-color;
+          justify-content: flex-start;
+          border-radius: 0px;
+          align-items: center;
+          position: relative;
+          display: flex;
+          height: 10px;
+          width: 100%;
+        }
+
+        .progress-value {
+          animation: load 3s normal forwards;
+          border-radius: 0;
+          background: $theme-color;
+          height: 10px;
+          width: 0;
+        }
+
+        .style-two {
+          animation: load2 3s normal forwards;
+        }
+
+        .style-three {
+          animation: load3 3s normal forwards;
+        }
+
+        @keyframes load {
+          0% {
+            width: 0;
+          }
+          100% {
+            width: 90%;
+          }
+        }
+
+        @keyframes load2 {
+          0% {
+            width: 0;
+          }
+          100% {
+            width: 70%;
+          }
+        }
+        
+        @keyframes load3 {
+          0% {
+            width: 0;
+          }
+          100% {
+            width: 55%;
+          }
+        }
+      }
+    }
+  }
+}

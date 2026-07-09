@@ -1,0 +1,256 @@
+.testimonial-main-item {
+  position: relative;
+  margin-top: 30px;
+  overflow: hidden;
+  border-radius: 20px;
+
+  .top-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .testimonial-card-item {
+    padding: 30px;
+    background-color: $bg-color;
+    position: relative;
+    border-radius: 20px;
+
+    .polygon-shape {
+      position: absolute;
+      left: 30px;
+      bottom: -38px;
+    }
+
+    .testimonial-content {
+
+      .star {
+        color: #ffb700;
+        font-size: 24px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .info-item {
+        @include flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        .icon {
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          border-radius: 50px;
+          text-align: center;
+          background-color: $theme-color;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .client-info-item {
+    padding: 40px 25px 0;
+    @include flex;
+    gap: 15px;
+  }
+}
+
+.testimonial-section2 {
+  position: relative;
+
+  .reviews-wrapper {
+
+    .reviews-content {
+      img {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .thumb {
+
+    img {
+      @include imgw;
+      border-radius: 18px;
+    }
+
+    &.style-3 {
+      margin-top: 30px;
+    }
+  }
+
+  .content-left {
+    margin-top: 190px;
+
+    @include breakpoint (max-lg) {
+      margin-top: 0;
+    }
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    &.style-3 {
+      padding: 0 60px;
+
+      @include breakpoint(max-sm) {
+        padding: 0;
+      }
+
+      @include breakpoint(max-lg) {
+        padding-left: 0;
+      }
+      
+      h3 {
+        font-weight: 400;
+        line-height: 40px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(37, 37, 37, 0.4);
+          padding-bottom: 30px;
+          margin-bottom: 40px;
+
+          @include breakpoint(max-sm) {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+          }
+        }
+
+        @include breakpoint(max-xl) {
+          font-size: 16px;
+          padding-bottom: 25px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+  .content-right {
+    margin-left: 40px;
+
+    @include breakpoint(max-xl) {
+      margin-left: 0;
+    }
+    .icon {
+      margin-top: 16px;
+      margin-bottom: 6px;
+
+      @include breakpoint(max-sm) {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+  }
+
+  .content-slide-3 {
+    padding: 0 60px;
+
+    @include breakpoint(max-sm) {
+      padding: 0;
+    }
+
+    @include breakpoint(max-lg) {
+      padding-left: 0;
+    }
+    
+    h3 {
+      font-weight: 400;
+      line-height: 40px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(37, 37, 37, 0.4);
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+
+        @include breakpoint(max-sm) {
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      @include breakpoint(max-xl) {
+        font-size: 16px;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+  .btn-wrap {
+    display: flex;
+    gap: 24px;
+    margin-top: 50px;
+
+    @include breakpoint(max-lg) {
+      position: static;
+      margin-top: 25px;
+    }
+
+    .array-prev,
+    .array-next {
+      width: 60px;
+      height: 60px;
+      background: $bg-color-2;
+      line-height: 70px;
+      border-radius: 6px;
+      @include transition;
+      text-align: center;
+
+      &:hover {
+        background-color: $theme-color-2;
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+
+    @include breakpoint(max-lg) {
+      bottom: 9%;
+      left: 9%;
+    }
+
+    @include breakpoint(max-sm) {
+      display: none;
+    }
+  }
+
+  .array-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    right: 19%;
+    bottom: 22%;
+    z-index: 1;
+
+    @include breakpoint(max-xl) {
+      right: 10%;
+      bottom: 14%;
+    }
+
+    @include breakpoint(max-lg) {
+      bottom: 7%;
+    }
+
+    @include breakpoint(max-sm) {
+      display: none;
+    }
+  }
+}
+
+.testi-new-conetent {
+  padding-left: 70px;
+  @include breakpoint(max-xl) {
+    padding-left: 0;
+    border-left: none;
+  }
+  border-left: 1px solid #ebebeb;
+}

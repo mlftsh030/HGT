@@ -1,0 +1,98 @@
+.brand-wrapper {
+  margin-top: 100px;
+
+  @include breakpoint(max-sm) {
+    margin-top: 60px;
+  }
+
+  .brand-title {
+    margin-bottom: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+
+    @include breakpoint(max-sm) {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 18px;
+      right: 0;
+      width: 82%;
+      height: 1%;
+      background: rgba(91, 91, 91, 0.3);
+
+      @include breakpoint(max-xl) {
+        width: 75%;
+      }
+
+      @include breakpoint(max-lg) {
+        width: 67%;
+      }
+
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+  }
+
+  .brand-title2 {
+    text-align: end;
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 50px;
+
+    @include breakpoint(max-sm) {
+      display: none;
+    }
+
+    span {
+      color: $theme-color-2;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 18px;
+      left: 0;
+      width: 75%;
+      height: 1%;
+      background: rgba(91, 91, 91, 0.3);
+
+      @include breakpoint(max-xl) {
+        width: 66%;
+      }
+
+      @include breakpoint(max-lg) {
+        width: 55%;
+      }
+
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+  }
+
+  .brand-image {
+    text-align: center;
+    filter: grayscale(100%);
+    @include transition;
+    opacity: 0.4;
+
+    &:hover {
+      filter: initial;
+      opacity: 1;
+    }
+  }
+
+  .swiper-slide.swiper-slide-active {
+    
+    .brand-image {
+      filter: initial;
+      opacity: 1;
+    }
+  }
+}

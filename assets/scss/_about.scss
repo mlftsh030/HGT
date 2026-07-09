@@ -1,0 +1,258 @@
+.about-wrapper {
+  margin-bottom: 53px;
+  position: relative;
+  z-index: 99;
+
+  @include breakpoint(max-xl) {
+    margin-bottom: 0;
+  }
+
+  .about-left-image {
+    max-width: 308px;
+    position: relative;
+
+    @include breakpoint(max-xl) {
+      max-width: 937px;
+    }
+
+    img {
+      @include imgw;
+      border-radius: 18px;
+    }
+
+    .about-image-2 {
+      position: absolute;
+      max-width: 225px;
+      bottom: -98px;
+      right: -37px;
+
+      @include breakpoint(max-xl) {
+        right: initial;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  .about-content {
+    text-align: center;
+    margin-top: 30px;
+
+    @include breakpoint(max-xl) {
+      text-align: initial;
+      margin-top: 0;
+    }
+
+    .about-button {
+      margin-top: 40px;
+    }
+  }
+
+  .about-right-image {
+    max-width: 307px;
+    position: relative;
+
+    @include breakpoint(max-xl) {
+      max-width: 937px;
+    }
+
+    img {
+      @include imgw;
+      border-radius: 18px;
+    }
+
+    .about-image-2 {
+      position: absolute;
+      max-width: 225px;
+      bottom: -98px;
+      left: -37px;
+
+      @include breakpoint(max-xl) {
+        right: 0;
+        left: initial;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.about-wrapper2 {
+  
+  .section-title-area {
+    align-items: end;
+  }
+
+  .number {
+    @include flex;
+    gap: 10px;
+
+    h1 {
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #4da628;
+    }
+  }
+
+  .thumb {
+    img {
+      @include imgw;
+      border-radius: 18px;
+    }
+  }
+
+  .content-wrapper {
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(max-lg) {
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-left: 0;
+    }
+
+    .content {
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 50px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.about-section2 {
+  position: relative;
+
+  .shape {
+    position: absolute;
+    left: 52%;
+    top: 45%;
+    transform: rotate(80deg);
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+}
+
+.about-section3 {
+  position: relative;
+
+  .shape {
+    position: absolute;
+    left: 41%;
+    top: 20%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+
+  .shape2 {
+    position: absolute;
+    left: 24%;
+    bottom: 12%;
+
+    @include breakpoint(max-xl) {
+      display: none;
+    }
+  }
+}
+
+.about-wrapper-3 {
+  margin-bottom: 20px;
+
+  @include breakpoint(max-xl) {
+    margin-bottom: 0;
+  }
+
+  .thumb {
+    position: relative;
+    width: 510px;
+
+    img {
+      @include imgw;
+      border-radius: 20px;
+    }
+
+    @include breakpoint(max-lg) {
+      width: initial;
+    }
+
+    .thumb2 {
+      position: absolute;
+      width: 325px;
+      right: -28%;
+      bottom: -22%;
+
+      img {
+        @include imgw;
+        border-radius: 20px;
+      }
+
+      @include breakpoint(max-xl) {
+        right: 0%;
+        bottom: 0%;
+      }
+
+      @include breakpoint(max-sm) {
+        width: 150px;
+      }
+    }
+  }
+  .content {
+    margin-left: 60px;
+
+    @include breakpoint(max-lg) {
+      margin-left: 0;
+    }
+    .section-title {
+      p {
+        margin-top: 20px;
+      }
+    }
+
+    .items {
+      margin-top: 30px;
+      @include flex;
+      gap: 20px;
+
+      @include breakpoint(max-xl) {
+        flex-wrap: wrap;
+      }
+
+      @include breakpoint(max-sm) {
+        margin-top: 20px;
+      }
+
+      .icon {
+        width: 80px;
+        height: 80px;
+        background-color: $theme-color-3;
+        @include flex;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 8px;
+      }
+    }
+
+    .theme-btn {
+      margin-top: 50px;
+
+      &::before {
+        background-color: $theme-color-3;
+      }
+      &:hover {
+        color: $header-color;
+
+        img {
+          filter: brightness(0) contrast(100%);
+        }
+      }
+    }
+  }
+}

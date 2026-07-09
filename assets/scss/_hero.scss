@@ -1,0 +1,469 @@
+.hero-section {
+    padding: 180px 0 0;
+    position: relative;
+    z-index: 9;
+
+    &::after {
+        @include before;
+        background-color: $white;
+        top: 92%;
+        z-index: -1;
+
+        @include breakpoint(max-xl) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(max-xl) {
+        padding: 150px 0;
+    }
+
+    @include breakpoint(max-lg) {
+        padding: 120px 0;
+    }
+
+    @include breakpoint(max-sm) {
+        padding: 80px 0;
+    }
+
+    &::before {
+        @include before;
+        background: linear-gradient(89deg, #0e0e0e -3.06%, rgba(14, 14, 14, 0) 99.52%);
+        height: 92%;
+
+        @include breakpoint(max-xl) {
+            height: 100%;
+        }
+    }
+
+    .shape {
+        position: absolute;
+        top: 25%;
+
+        @include breakpoint(max-xxxl) {
+            display: none;
+        }
+    }
+
+    .hero-bottom {
+        margin-top: 180px;
+        position: relative;
+
+        @include breakpoint(max-xl) {
+            margin-top: 150px;
+        }
+
+        @include breakpoint(max-lg) {
+            margin-top: 120px;
+        }
+
+        @include breakpoint(max-sm) {
+            margin-top: 80px;
+        }
+
+        .booking-list-area {
+            border-radius: 10px;
+            padding: 40px 30px;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+
+            @include breakpoint(max-xl) {
+                flex-wrap: wrap;
+                gap: 40px;
+                padding: 40px;
+            }
+
+            .theme-btn {
+                max-width: 155px;
+                width: 100%;
+            }
+
+            .booking-list {
+                @include breakpoint(max-xl) {
+                    flex-basis: 100%;
+                }
+                &.style-2 {
+                    flex-basis: 40%;
+                }
+                .icon {
+                    margin-bottom: 20px;
+                    @include flex;
+                    gap: 10px;
+
+                    i {
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid rgba(14, 14, 14, 0.3);
+                        @include flex;
+                        justify-content: center;
+                        border-radius: 100px;
+                    }
+
+                    h6 {
+                        font-weight: 700;
+                        line-height: 26px;
+                    }
+                }
+
+                .form {
+
+                    .nice-select {
+                        border-radius: 8px;
+                        border: 1px solid rgba(118, 118, 118, 0.3);
+                        background: #f8f3f2;
+                        padding: 9px 20px;
+                        width: 100%;
+                        padding-right: 30px;
+
+                        &::after {
+                            width: 8px;
+                            height: 8px;
+                            margin-top: -4px;
+                        }
+                    }
+
+                    input {
+                        border-radius: 8px;
+                        border: 1px solid rgba(118, 118, 118, 0.3);
+                        background: #f8f3f2;
+                        padding: 9px 20px;
+                        width: 100%;
+                        color: $header-color;
+                    }
+
+                    .box {
+                        position: relative;
+
+                        i {
+                            position: absolute;
+                            top: 16px;
+                            left: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-wrapper {
+
+    .section-title {
+
+        h1 {
+            font-size: 80px;
+
+            @include breakpoint(max-xl) {
+                font-size: 60px;
+            }
+
+            @include breakpoint(max-lg) {
+                font-size: 50px;
+            }
+
+            @include breakpoint(max-md) {
+                font-size: 40px;
+            }
+
+            @include breakpoint(max-sm) {
+                font-size: 35px;
+            }
+        }
+    }
+
+    .hero-button {
+        display: flex;
+        gap: 30px;
+        margin-top: 30px;
+
+        @include breakpoint(max-xl) {
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .theme-btn {
+
+            &.style-2 {
+                background-color: transparent;
+                border: 1px solid $white;
+
+                &::before {
+                    background-color: $theme-color;
+                }
+
+                &:hover {
+                    border: 1px solid $theme-color;
+                }
+            }
+        }
+    }
+}
+
+.hero-2 {
+    padding: 90px 0 90px;
+    position: relative;
+
+    &::before {
+        @include before;
+        background: rgba(25, 27, 26, 0.9);
+    }
+
+    .hero-content {
+        position: relative;
+        // z-index: 999;
+        margin-bottom: 90px;
+
+        @include breakpoint(max-xl) {
+            margin-bottom: 20px;
+        }
+
+        span {
+            font-size: 32px;
+            font-weight: 400;
+            color: $theme-color-2;
+            font-family: $heading-font-2;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            display: inline-block;
+
+            @include breakpoint(max-xl) {
+                font-size: 30px;
+            }
+        }
+
+        h1 {
+            color: $white;
+            margin-bottom: 20px;
+
+            @include breakpoint(max-sm) {
+                font-size: 35px;
+            }
+        }
+
+        p {
+            color: $white;
+        }
+    }
+
+    .hero-image {
+        position: relative;
+        margin-right: -40px;
+
+        @include breakpoint(max-xl) {
+            margin-right: 0;
+        }
+
+        .thumb {
+            max-width: 308px;
+
+            @include breakpoint(max-sm) {
+                max-width: 100%;
+            }
+
+            img {
+                @include imgw;
+                border-radius: 20px;
+            }
+
+            &.style-1 {
+                margin-bottom: 115px;
+
+                @include breakpoint(max-xl) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+    .booking-list-area {
+        position: relative;
+        border-radius: 10px;
+        background: $white;
+        padding: 40px 30px;
+        @include flex;
+        justify-content: space-between;
+        margin-top: -138px;
+        max-width: 75%;
+
+        @include breakpoint(max-xl) {
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 30px;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+
+        .booking-list {
+            @include flex;
+            gap: 20px;
+
+            .icon {
+                width: 60px;
+                height: 60px;
+                background-color: $bg-color-2;
+                border-radius: 10px;
+                @include flex;
+                justify-content: center;
+                // stroke-width: 1px;
+                // stroke: rgba(91, 91, 91, 0.30);
+            }
+
+            h6 {
+                color: #5b5b5b;
+            }
+
+            .form-clt {
+
+                .nice-select {
+                    padding-right: 25px;
+                    span {
+                        color: $header-color;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 600;
+                    }
+
+                    &::after {
+                        border-bottom: 1px solid $header-color;
+                        border-right: 1px solid $header-color;
+                        margin-top: 0;
+                        right: 0;
+                        top: 30%;
+                        width: 9px;
+                        height: 9px;
+
+                        @include breakpoint(max-xl) {
+                            right: -10px;
+                            top: 25%;
+                        }
+                    }
+
+                    .list {
+                        right: -30px;
+
+                        li {
+                            color: $header-color;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 26px;
+                        }
+                    }
+                }
+
+                &.style-2 {
+
+                    .nice-select {
+
+                        .list {
+                            right: -50px;
+                            width: 200px;
+
+                            li {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-3 {
+    padding: 100px 0 100px;
+    position: relative;
+
+    @include breakpoint(max-sm) {
+        padding-bottom: 100px;
+    }
+
+    &::before {
+        @include before;
+        background: linear-gradient(90deg, rgba(37, 37, 37, 0.97) 0.38%, #252525 0.38%, rgba(37, 37, 37, 0) 99.64%);
+    }
+
+    .hero-content {
+        position: relative;
+
+        span {
+            font-size: 32px;
+            font-weight: 400;
+            color: $theme-color-3;
+            font-family: $heading-font-2;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            display: inline-block;
+        }
+
+        h1 {
+            color: $white;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+
+    .hero-form {
+        position: relative;
+        padding: 40px 30px;
+        background-color: $white;
+        border-radius: 18px;
+
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .input {
+            
+            .clr {
+                margin-bottom: 15px;
+
+                label {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    color: $header-color;
+                    margin-bottom: 5px;
+                }
+                input {
+                    width: 100%;
+                    outline: none;
+                    padding: 8px 16px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(83, 83, 83, 0.4);
+                    color: #535353;
+                    background: $white;
+                }
+            }
+        }
+
+        .nice-select {
+            padding: 8px 16px !important;
+
+            &::after {
+                width: 8px;
+                height: 8px;
+            }
+        }
+
+        .theme-btn {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+
+    .theme-btn {
+        padding: 22px 32px;
+        margin-top: 40px;
+    }
+}
