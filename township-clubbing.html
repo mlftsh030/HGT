@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<< Header Area >>-->
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Homeless Group Tours">
+    <meta name="description" content="Township Clubbing in Khayelitsha with Homeless Group Tours &mdash; Rands, Kwa Ace, The Milk, Teez Lounge and more, from R1,500pp all-in.">
+    <!-- ======== Page title ============ -->
+    <title>Township Clubbing &ndash; Kasi Lifestyle | Homeless Group Tours</title>
+    <!--<< Favcion >>-->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--<< All Min Css >>-->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--<< Color.css >>-->
+    <link rel="stylesheet" href="assets/css/color.css">
+    <!--<< flacticon.css >>-->
+    <link rel="stylesheet" href="assets/css/flacticon.css">
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .venue-card {
+            border-radius: 18px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+            height: 100%;
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+        .venue-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0,0,0,.14);
+        }
+        .venue-photo {
+            position: relative;
+            height: 190px;
+            display: flex;
+            align-items: flex-end;
+            padding: 18px;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+        }
+        .venue-photo::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.75) 100%);
+        }
+        .venue-photo .venue-icon {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.2);
+            border: 1px solid rgba(255,255,255,.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            z-index: 2;
+        }
+        .venue-photo .venue-name {
+            position: relative;
+            z-index: 2;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+            text-shadow: 0 2px 6px rgba(0,0,0,.65);
+        }
+        .venue-photo.tone-1 { background: linear-gradient(135deg, #7a1f5c, #c89128); }
+        .venue-photo.tone-2 { background: linear-gradient(135deg, #4a1942, #9c3d54); }
+        .venue-photo.tone-3 { background: linear-gradient(135deg, #22303f, #c89128); }
+        .venue-photo.tone-4 { background: linear-gradient(135deg, #5c1f2b, #b3652f); }
+        .venue-photo.tone-5 { background: linear-gradient(135deg, #2b0f38, #7a1f5c); }
+        .venue-body {
+            padding: 20px 22px 24px;
+        }
+        .venue-body .loc {
+            color: var(--theme);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .venue-body p {
+            margin-bottom: 0;
+            font-size: 15px;
+        }
+        .venue-rating {
+            font-size: 13px;
+            color: #f5a623;
+            margin-bottom: 6px;
+        }
+        .kasi-hero-photo {
+            height: 260px;
+            border-radius: 20px 20px 0 0;
+            background-size: cover;
+            background-position: center;
+        }
+        .kasi-hero-photo + .price-hero-card {
+            border-radius: 0 0 20px 20px;
+        }
+        .price-hero-card {
+            border-radius: 20px;
+            background: linear-gradient(160deg, #2b0f38 0%, #7a1f5c 45%, #c89128 100%);
+            color: #fff;
+            padding: 40px;
+        }
+        .price-hero-card h3 { color: #fff; }
+        .price-hero-card ul { margin: 0; padding-left: 20px; }
+        .price-hero-card li { color: rgba(255,255,255,.9); margin-bottom: 8px; }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="H" class="letters-loading">H</span>
+                <span data-text-preloader="G" class="letters-loading">G</span>
+                <span data-text-preloader="T" class="letters-loading">T</span>
+                <span data-text-preloader="O" class="letters-loading">O</span>
+                <span data-text-preloader="U" class="letters-loading">U</span>
+                <span data-text-preloader="R" class="letters-loading">R</span>
+                <span data-text-preloader="S" class="letters-loading">S</span>
+            </div>
+            <p class="text-center">Loading</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+                <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+                <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+                <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+            </div>
+        </div>
+    </div>
+    <!--<< Back-Top Start >>-->
+    <button id="back-top" class="back-to-top">
+        <i class="fa-regular fa-arrow-up"></i>
+    </button>
+    <!--<< Mouse Cursor Start >>-->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+    <!-- Offcanvas Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index.html">
+                                <img src="assets/img/logo/logo.png" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text d-none d-xl-block">
+                        Nullam dignissim, ante scelerisque the is euismod fermentum odio sem semper the is erat, a
+                        feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
+                    </p>
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Cape Town, South Africa</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:andilemdebuka@gmail.com"><span
+                                            class="mailto:andilemdebuka@gmail.com">andilemdebuka@gmail.com</span></a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">Mod-friday, 09am -05pm</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+27787525502">+27 78 752 5502</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-button mt-4">
+                            <a href="contact.html" class="theme-btn"> Request A Quote <i
+                                    class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                        </div>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas__overlay"></div>
+    <!-- header-top -->
+    <div class="header-top-section">
+        <div class="container">
+            <div class="header-top-wrapper bg-cover" style="background-image: url(assets/img/header/1-gold.jpg);">
+                <ul class="top-left">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:andilemdebuka@gmail.com">andilemdebuka@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Cape Town, South Africa
+                    </li>
+                </ul>
+                <ul class="top-right">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header-main -->
+    <div id="header-sticky" class="header-1">
+        <div class="container">
+            <div class="mega-menu-wrapper">
+                <div class="header-main">
+                    <div class="logo">
+                        <a href="index.html" class="header-logo">
+                            <img src="assets/img/logo/logo.png" alt="logo-img">
+                        </a>
+                    </div>
+                    <div class="header-right d-flex justify-content-end align-items-center">
+                        <div class="mean__menu-wrapper">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="activities.html">Activities</a></li>
+                                        <li><a href="tour.html">Tours</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="header__hamburger my-auto">
+                            <div class="sidebar__toggle">
+                                <img src="assets/img/icon/bars.svg" alt="img">
+                            </div>
+                        </div>
+                        <a href="contact.html" class="theme-btn"> Request A Quote
+                            <img src="assets/img/icon/white-arrow.svg" alt="img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb-Section Start -->
+    <section class="breadcrumb-wrapper fix bg-cover"
+        style="background-image: url(assets/img/cape-town/city-hall.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="page-heading">
+                    <h2>Township Clubbing &ndash; Kasi Lifestyle</h2>
+                    <ul class="breadcrumb-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="fa-solid fa-chevrons-right"></i></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><i class="fa-solid fa-chevrons-right"></i></li>
+                        <li><a href="nightlife.html">Nightlife Experience</a></li>
+                        <li><i class="fa-solid fa-chevrons-right"></i></li>
+                        <li class="active">Township Clubbing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities-Details Section Start -->
+    <section class="activities-details-section fix section-padding">
+        <div class="container">
+            <div class="activities-details-wrapper">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="activities-rating">
+                            <div class="activities-content">
+                                <h3>Township Clubbing &mdash; The Kasi Experience</h3>
+                                <ul class="rating">
+                                    <li>
+                                        <i class="fa-regular fa-location-dot"></i>
+                                        Khayelitsha &amp; Gugulethu, Cape Town, South Africa
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="activities-wrap">
+                            <div class="activities-item">
+                                <div class="icon"><img src="assets/img/icon/22.svg" alt="img"></div>
+                                <div class="content">
+                                    <h6>Area</h6>
+                                    <span>Khayelitsha &amp; Gugulethu</span>
+                                </div>
+                            </div>
+                            <div class="activities-item">
+                                <div class="icon"><img src="assets/img/icon/23.svg" alt="img"></div>
+                                <div class="content">
+                                    <h6>Vibe</h6>
+                                    <span>Amapiano &amp; Afro-house</span>
+                                </div>
+                            </div>
+                            <div class="activities-item">
+                                <div class="icon"><img src="assets/img/icon/24.svg" alt="img"></div>
+                                <div class="content">
+                                    <h6>Duration</h6>
+                                    <span>Evening &ndash; Late</span>
+                                </div>
+                            </div>
+                            <div class="activities-item">
+                                <div class="icon"><img src="assets/img/icon/25.svg" alt="img"></div>
+                                <div class="content">
+                                    <h6>Group Size</h6>
+                                    <span>2&ndash;12</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-12">
+                        <div class="activities-details-content">
+                            <h3>Overview</h3>
+                            <p>
+                                Skip the tourist strip and get the real Cape Town night out &mdash; open-air
+                                shisanyama, premium lounges, and the biggest Amapiano and Afro-house sets in the
+                                city, all in Khayelitsha where the culture actually lives. This package bundles
+                                secure transport, entry and a proper feast into one straight price, so all you
+                                have to do is show up ready to dance.
+                            </p>
+
+                            <div class="activities-list-item">
+                                <h3>The Kasi Lifestyle Package</h3>
+                                <div class="row g-4 align-items-stretch">
+                                    <div class="col-lg-12">
+                                        <div class="kasi-hero-photo" style="background-image: url(assets/img/nightlife/kasi-hero.jpg);"></div>
+                                        <div class="price-hero-card">
+                                            <h3 class="mb-2">R1,500 <span style="font-size: 15px; font-weight: 400; color: rgba(255,255,255,.85);">/ person, all-in</span></h3>
+                                            <p class="mb-3" style="color: rgba(255,255,255,.9);">Everything you need for one unforgettable Kasi night out.</p>
+                                            <ul>
+                                                <li>Secure return transport from your accommodation</li>
+                                                <li>VIP / general access entry to your chosen venue</li>
+                                                <li>Premium shisanyama platter &mdash; beef, pork, chicken wings &amp; sausage with pap, chakalaka &amp; steamed bread</li>
+                                                <li>A bottle of premium spirit or a bucket of ciders/beers</li>
+                                                <li>Dedicated security &amp; a secure, guided environment all night</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="activities-list-item">
+                                <h3>Venues on This Package</h3>
+                                <p>Pick a venue when you book, or let us build a route across more than one in a single night.</p>
+                                <div class="row g-4">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="venue-card">
+                                            <div class="venue-photo tone-1" style="background-image: url(assets/img/nightlife/township-braai.jpg);">
+                                                <span class="venue-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                                                <h5 class="venue-name">Rands Cape Town</h5>
+                                            </div>
+                                            <div class="venue-body">
+                                                <span class="venue-rating"><i class="fa-solid fa-star"></i> 4.5 &middot; Khayelitsha</span>
+                                                <span class="loc"><i class="fa-solid fa-location-dot"></i> 6 Makhabeni Road, Khaya Bazzar</span>
+                                                <p>
+                                                    An iconic open-air lifestyle landmark and meat emporium, famous
+                                                    for "Rands Sundays" and massive summer sessions with top SA DJs.
+                                                    Unspent alcohol must stay on-site &mdash; it isn't taken back to
+                                                    your vehicle.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="venue-card">
+                                            <div class="venue-photo tone-2" style="background-image: url(assets/img/nightlife/kwaace.jpg);">
+                                                <span class="venue-icon"><i class="fa-solid fa-crown"></i></span>
+                                                <h5 class="venue-name">Kwa Ace</h5>
+                                            </div>
+                                            <div class="venue-body">
+                                                <span class="venue-rating"><i class="fa-solid fa-star"></i> 4.5 &middot; Khayelitsha</span>
+                                                <span class="loc"><i class="fa-solid fa-location-dot"></i> 158 Phakamani Road</span>
+                                                <p>
+                                                    A trendy, recently relaunched multi-level lounge known as "The
+                                                    Castle" &mdash; rooftop seating, General/VIP/VVIP sections, and
+                                                    a dedicated deep-house upper floor. Has hosted artists like Black
+                                                    Coffee.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="venue-card">
+                                            <div class="venue-photo tone-3" style="background-image: url(assets/img/nightlife/themilk.jpg);">
+                                                <span class="venue-icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+                                                <h5 class="venue-name">The Milk Restaurant &amp; Bar</h5>
+                                            </div>
+                                            <div class="venue-body">
+                                                <span class="venue-rating"><i class="fa-solid fa-star"></i> 4.2 &middot; Khayelitsha</span>
+                                                <span class="loc"><i class="fa-solid fa-location-dot"></i> Cnr Makabeni &amp; Zantsi St</span>
+                                                <p>
+                                                    A first-class three-storey lifestyle venue &mdash; boutique
+                                                    ground-floor lounge, first-floor restaurant, and a rooftop bar
+                                                    known for a high-spending clientele and premium champagne.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="venue-card">
+                                            <div class="venue-photo tone-4" style="background-image: url(assets/img/nightlife/teezlounge.jpg);">
+                                                <span class="venue-icon"><i class="fa-solid fa-drumstick-bite"></i></span>
+                                                <h5 class="venue-name">Teez Lounge</h5>
+                                            </div>
+                                            <div class="venue-body">
+                                                <span class="venue-rating"><i class="fa-solid fa-star"></i> 4.6 &middot; Gugulethu &amp; Langa</span>
+                                                <span class="loc"><i class="fa-solid fa-location-dot"></i> NY 115, Gugulethu</span>
+                                                <p>
+                                                    Carrying on the historic Mzoli's kasi chill-spot vibe &mdash;
+                                                    Chesterfield couches, quality sound, and a butcher onsite for
+                                                    fresh braai meat.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="venue-card">
+                                            <div class="venue-photo tone-5" style="background-image: url(assets/img/nightlife/saidas.jpg);">
+                                                <span class="venue-icon"><i class="fa-solid fa-music"></i></span>
+                                                <h5 class="venue-name">Saida's Premium Lounge</h5>
+                                            </div>
+                                            <div class="venue-body">
+                                                <span class="venue-rating"><i class="fa-solid fa-star"></i> 4.6 &middot; Khayelitsha</span>
+                                                <span class="loc"><i class="fa-solid fa-location-dot"></i> A385B Maphongwane, Site C</span>
+                                                <p>
+                                                    A casual yet trendy community spot, popular for "Premium
+                                                    Shandis" events and local spinning sessions.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-items" id="rules">
+                                <h3>Rules &amp; Requirements</h3>
+                                <div class="faq-accordion">
+                                    <div class="accordion" id="rules-accordion-township">
+                                        <div class="accordion-item">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#tr1"
+                                                    aria-expanded="true" aria-controls="tr1">
+                                                    Physical ID / Passport
+                                                </button>
+                                            </h5>
+                                            <div id="tr1" class="accordion-collapse show" data-bs-parent="#rules-accordion-township">
+                                                <div class="content">
+                                                    <div class="accordion-body">
+                                                        A physical South African ID or original passport is
+                                                        mandatory for entry at every venue on this package, used to
+                                                        verify age. Most events are 18+, though some are 21+ or 23+.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#tr2"
+                                                    aria-expanded="false" aria-controls="tr2">
+                                                    Cooler Boxes &amp; Corkage
+                                                </button>
+                                            </h5>
+                                            <div id="tr2" class="accordion-collapse collapse" data-bs-parent="#rules-accordion-township">
+                                                <div class="content">
+                                                    <div class="accordion-body">
+                                                        Many venues charge a corkage fee (roughly R50&ndash;R150) if
+                                                        you bring your own cooler box, usually with a cut-off time
+                                                        such as 2 PM. Rands specifically requires unspent/unopened
+                                                        alcohol to stay on-site rather than returning to your car.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#tr3"
+                                                    aria-expanded="false" aria-controls="tr3">
+                                                    Arrival Time &amp; Capacity
+                                                </button>
+                                            </h5>
+                                            <div id="tr3" class="accordion-collapse collapse" data-bs-parent="#rules-accordion-township">
+                                                <div class="content">
+                                                    <div class="accordion-body">
+                                                        Popular spots like Rands and Teez Lounge reach capacity fast
+                                                        on weekends. We recommend arriving before 2 PM for daytime
+                                                        sessions to secure a table, and booking evening slots in
+                                                        advance.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#tr4"
+                                                    aria-expanded="false" aria-controls="tr4">
+                                                    Security &amp; Conduct
+                                                </button>
+                                            </h5>
+                                            <div id="tr4" class="accordion-collapse collapse" data-bs-parent="#rules-accordion-township">
+                                                <div class="content">
+                                                    <div class="accordion-body">
+                                                        Weapons and illegal substances are strictly prohibited.
+                                                        Right of admission is reserved and enforced by professional
+                                                        security teams at every venue.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-items">
+                                <h3>What to Bring</h3>
+                                <div class="activities-item">
+                                    <ul class="activities-list">
+                                        <li><img src="assets/img/icon/35.svg" alt="img">Original South African ID or physical passport</li>
+                                        <li><img src="assets/img/icon/35.svg" alt="img">Cash for corkage fees or extra rounds</li>
+                                        <li><img src="assets/img/icon/35.svg" alt="img">Comfortable shoes for dancing</li>
+                                        <li><img src="assets/img/icon/35.svg" alt="img">An appetite &mdash; the shisanyama platters are generous</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="activities-list-item">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-md-6">
+                                        <div class="video-image bg-cover"
+                                            style="background-image: url(assets/img/nightlife/township-included.jpg);">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h3>Included and Excluded</h3>
+                                        <div class="activities-item">
+                                            <span class="list-label included">What's Included</span>
+                                            <ul class="activities-list included-list">
+                                                <li><i class="fa-solid fa-circle-check"></i>Secure return transport</li>
+                                                <li><i class="fa-solid fa-circle-check"></i>Entry to your chosen venue</li>
+                                                <li><i class="fa-solid fa-circle-check"></i>Premium shisanyama platter</li>
+                                                <li><i class="fa-solid fa-circle-check"></i>Bottle or bucket drink allowance</li>
+                                            </ul>
+                                            <span class="list-label excluded">What's Excluded</span>
+                                            <ul class="activities-list excluded-list">
+                                                <li><i class="fa-solid fa-circle-xmark"></i>Extra drinks beyond the allowance</li>
+                                                <li><i class="fa-solid fa-circle-xmark"></i>Corkage fees for outside coolers</li>
+                                                <li><i class="fa-solid fa-circle-xmark"></i>Gratuities</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="map-area">
+                                <h3>View in Map</h3>
+                                <div class="google-map">
+                                    <iframe
+                                        src="https://maps.google.com/maps?q=Khayelitsha%2C%20Cape%20Town%2C%20South%20Africa&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-5">
+                                <a href="contact.html" class="theme-btn">Book This Package
+                                    <img src="assets/img/icon/white-arrow.svg" alt="img">
+                                </a>
+                                <a href="cbd-clubbing.html" class="theme-btn style-2 ms-3">See CBD Clubbing Instead
+                                    <img src="assets/img/icon/white-arrow.svg" alt="img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-Section Start -->
+    <footer class="footer-section fix footer-3 section-padding pb-0">
+        <div class="container">
+            <div class="footer-top style-new">
+                <div class="logo-items">
+                    <a href="index.html">
+                        <img src="assets/img/logo/logo.png" alt="img">
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-items">
+                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="content"><h6><a href="tel:+27787525502">+27 78 752 5502</a></h6></div>
+                    </div>
+                    <div class="contact-items">
+                        <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="content"><h6><a href="mailto:andilemdebuka@gmail.com">andilemdebuka@gmail.com</a></h6></div>
+                    </div>
+                    <div class="contact-items">
+                        <div class="icon"><i class="fa-regular fa-location-dot"></i></div>
+                        <div class="content"><h6>Cape Town, South Africa</h6></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-widget-wrapper-new style-2 style-new-area">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 wow fadeInUp wow" data-wow-delay=".2s">
+                        <div class="single-widget-items">
+                            <div class="footer-content style-3">
+                                <h3>Follow Us</h3>
+                                <div class="social-icon style-3 d-flex align-items-center">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".4s">
+                        <div class="single-widget-items">
+                            <div class="widget-head"><h4 class="style-3">Activities</h4></div>
+                            <ul class="list-items style-3">
+                                <li><a href="quad-activity.html">Quad Biking</a></li>
+                                <li><a href="nightlife.html">Nightlife Experience</a></li>
+                                <li><a href="activities.html">Table Mountain Hike</a></li>
+                                <li><a href="activities.html">Cape Point</a></li>
+                                <li><a href="activities.html">Cape Winelands</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".6s">
+                        <div class="single-widget-items">
+                            <div class="widget-head"><h4 class="style-3">Quick Links</h4></div>
+                            <ul class="list-items style-3">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="tour.html">Tour</a></li>
+                                <li><a href="airport-transfer.html">Airport Transfer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".8s">
+                        <div class="single-widget-items">
+                            <div class="widget-head"><h4 class="style-3">Gallery Post</h4></div>
+                            <div class="footer-gallery">
+                                <div class="gallery-wrap">
+                                    <div class="gallery-item">
+                                        <div class="thumb style-3">
+                                            <a href="assets/img/footer/gallery-1.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-1.jpg" alt="gallery-img">
+                                                <div class="icon"><i class="far fa-plus"></i></div>
+                                            </a>
+                                        </div>
+                                        <div class="thumb style-3">
+                                            <a href="assets/img/footer/gallery-2.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-2.jpg" alt="gallery-img">
+                                                <div class="icon"><i class="far fa-plus"></i></div>
+                                            </a>
+                                        </div>
+                                        <div class="thumb style-3">
+                                            <a href="assets/img/footer/gallery-3.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-3.jpg" alt="gallery-img">
+                                                <div class="icon"><i class="far fa-plus"></i></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <div class="thumb style-3">
+                                            <a href="assets/img/footer/gallery-4.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-4.jpg" alt="gallery-img">
+                                                <div class="icon"><i class="far fa-plus"></i></div>
+                                            </a>
+                                        </div>
+                                        <div class="thumb style-3">
+                                            <a href="assets/img/footer/gallery-5.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-5.jpg" alt="gallery-img">
+                                                <div class="icon"><i class="far fa-plus"></i></div>
+                                            </a>
+                                        </div>
+                                        <div class="thumb style-3">
+                                            <a href="assets/img/footer/gallery-6.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-6.jpg" alt="gallery-img">
+                                                <div class="icon"><i class="far fa-plus"></i></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom style-2">
+                <div class="footer-wrapper">
+                    <p class="wow fadeInUp" data-wow-delay=".3s">
+                        &copy;<span class="style-3">Homeless Group Tours</span> 2026. All Rights Reserved
+                    </p>
+                    <ul class="bottom-list wow fadeInUp" data-wow-delay=".5s">
+                        <li>Terms of use</li>
+                        <li>Privacy Environmental Policy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--<< All JS Plugins >>-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/viewport.jquery.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
