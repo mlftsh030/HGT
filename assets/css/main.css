@@ -8181,6 +8181,12 @@ input.main-search-input::placeholder {
   color: var(--white);
   transform: translateY(-4px);
 }
+@media (max-width: 767px) {
+  .back-to-top,
+  .whatsapp-float {
+    display: none;
+  }
+}
 
 .section-title {
   position: relative;
