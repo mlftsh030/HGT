@@ -425,22 +425,13 @@ span {
   aspect-ratio: 4 / 5;
   border-radius: 18px;
   background-color: var(--bg);
-  border: 1px dashed var(--border-2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  color: var(--text);
-  text-align: center;
-  padding: 30px;
+  overflow: hidden;
 }
-.founder-photo-frame i {
-  font-size: 48px;
-  color: var(--border-2);
-}
-.founder-photo-frame span {
-  font-size: 15px;
+.founder-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
 }
 
 .about-wrapper2 .section-title-area {
