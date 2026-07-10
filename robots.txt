@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thehomelessgrouptours.com/sitemap.xml
