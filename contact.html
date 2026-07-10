@@ -84,11 +84,6 @@
             </div>
         </div>
     </div>
-
-    <!--<< Back-Top Start >>-->
-    <button id="back-top" class="back-to-top">
-        <i class="fa-regular fa-arrow-up"></i>
-    </button>
     <!--<< WhatsApp Float Start >>-->
     <a href="https://wa.me/27787525502" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
@@ -137,8 +132,8 @@
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <div class="offcanvas__contact-text">
-                                    <a href="mailto:andilemdebuka@gmail.com"><span
-                                            class="mailto:andilemdebuka@gmail.com">andilemdebuka@gmail.com</span></a>
+                                    <a href="mailto:info@thehomelessgrouptours.com"><span
+                                            class="mailto:info@thehomelessgrouptours.com">info@thehomelessgrouptours.com</span></a>
                                 </div>
                             </li>
                             <li class="d-flex align-items-center">
@@ -183,7 +178,7 @@
                 <ul class="top-left">
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:andilemdebuka@gmail.com">andilemdebuka@gmail.com</a>
+                        <a href="mailto:info@thehomelessgrouptours.com">info@thehomelessgrouptours.com</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-location-dot"></i>
@@ -293,7 +288,7 @@
                             <img src="assets/img/icon/21.svg" alt="">
                         </div>
                         <h3>Email Us Anytime:</h3>
-                        <p>andilemdebuka@gmail.com</p>
+                        <p>info@thehomelessgrouptours.com</p>
                     </div>
                 </div>
             </div>
@@ -324,11 +319,12 @@
                     <div class="contact-form style-2">
                         <h3>Fill The Contact Form</h3>
                         <p>Feel free to contact with us, we don't spam your email</p>
-                        <form action="contact.php" method="post">
+                        <form id="contact-form" action="/api/contact" method="post">
+                            <input type="hidden" name="to" id="contact-to" value="info">
                             <div class="row">
                                 <div class="col-6">
                                     <div class="form-clt">
-                                        <input type="text" name="name" id="name" placeholder="Your name">
+                                        <input type="text" name="name" id="name" placeholder="Your name" required>
                                     </div>
                                 </div>
                                 <div class="col-6">
@@ -338,19 +334,22 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-clt">
-                                        <input type="email" name="email" id="email" placeholder="Email address">
+                                        <input type="email" name="email" id="email" placeholder="Email address" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-clt">
                                         <textarea name="message" id="message"
-                                            placeholder="Write your message"></textarea>
+                                            placeholder="Write your message" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="theme-btn style-2">
                                         Send Message
                                     </button>
+                                </div>
+                                <div class="col-12">
+                                    <p id="contact-form-status" role="status" style="display:none; margin-top: 12px;"></p>
                                 </div>
                             </div>
                         </form>
@@ -392,7 +391,7 @@
                             <i class="fa-regular fa-envelope"></i>
                         </div>
                         <div class="content">
-                            <h6><a href="mailto:andilemdebuka@gmail.com">andilemdebuka@gmail.com</a></h6>
+                            <h6><a href="mailto:info@thehomelessgrouptours.com">info@thehomelessgrouptours.com</a></h6>
                         </div>
                     </div>
                     <div class="contact-items">
@@ -573,6 +572,47 @@
     <script src="assets/js/ajax-mail.js"></script>
     <!--<< Main.js >>-->
     <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var to = params.get("to");
+            var toField = document.getElementById("contact-to");
+            if (toField && to === "bookings") {
+                toField.value = "bookings";
+            }
+
+            var form = document.getElementById("contact-form");
+            var status = document.getElementById("contact-form-status");
+            if (!form || !status) return;
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                status.style.display = "block";
+                status.textContent = "Sending...";
+
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
+                })
+                    .then(function (response) {
+                        return response.json().then(function (data) {
+                            return { ok: response.ok, data: data };
+                        });
+                    })
+                    .then(function (result) {
+                        if (result.ok) {
+                            status.textContent = "Thanks! Your message has been sent.";
+                            form.reset();
+                        } else {
+                            status.textContent = result.data.error || "Something went wrong. Please try again.";
+                        }
+                    })
+                    .catch(function () {
+                        status.textContent = "Something went wrong. Please try again.";
+                    });
+            });
+        })();
+    </script>
 </body>
 
 </html>
